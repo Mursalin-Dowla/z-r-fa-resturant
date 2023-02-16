@@ -1,0 +1,164 @@
+[
+    {
+        "id":1,
+        "type":"breakfast",
+        "title":"Omlet Meal",
+        "img":"https://i.ibb.co/WxfHqYF/b1.jpg",
+        "description":"Omlet To Start The Day",
+        "price":300,
+        "quantity":2
+    },
+    {
+        "id":2,
+        "type":"breakfast",
+        "title":"Fruit CornFlex",
+        "description":"Healthy One For You",
+        "img":"https://i.ibb.co/Jm02tbR/b2.jpg",
+        "price":200,
+        "quantity":4
+    },
+    {
+        "id":3,
+        "type":"breakfast",
+        "title":"Pan Cake",
+        "description":"The Usual One",
+        "img":"https://i.ibb.co/6mZD8PG/b3.jpg",
+        "price":400,
+        "quantity":3
+    },
+    {
+        "id":4,
+        "type":"breakfast",
+        "title":"Daily Coffee",
+        "description":"Morning Freshness Here",
+        "img":"https://i.ibb.co/DzDXqgp/b4.jpg",
+        "price":250,
+        "quantity":2
+    },
+    {
+        "id":5,
+        "type":"breakfast",
+        "title":"Red Cherry Corn",
+        "description":"Taste On the Lips",
+        "img":"https://i.ibb.co/55Ck6wr/b5.jpg",
+        "price":300,
+        "quantity":3
+    },
+    {
+        "id":6,
+        "type":"breakfast",
+        "title":"Boiled Egg",
+        "description":"Egg On The Go",
+        "img":"https://i.ibb.co/P6x2DsZ/b6.jpg",
+        "price":500,
+        "quantity":1
+    },
+    {
+        "id":7,
+        "type":"lunch",
+        "title":"Salads",
+        "description":"Salad Of your Fav",
+        "img":"https://i.ibb.co/tck4yjx/l1.jpg",
+        "price":300,
+        "quantity":2
+    },
+    {
+        "id":8,
+        "type":"lunch",
+        "title":"Tomato Noodles",
+        "description":"Noodles And Veg",
+        "img":"https://i.ibb.co/3zQmgbg/l2.jpg",
+        "price":400,
+        "quantity":5
+    },
+    {
+        "id":9,
+        "type":"lunch",
+        "title":"Burger & Fries",
+        "description":"Burger With Fries",
+        "img":"https://i.ibb.co/QCrzgyS/l3.jpg",
+        "price":700,
+        "quantity":3
+    },
+    {
+        "id":10,
+        "type":"lunch",
+        "title":"Thai Soup",
+        "description":"Traditional Thai Soup",
+        "img":"https://i.ibb.co/r3hkmKn/l5.jpg",
+        "price":800,
+        "quantity":6
+    },
+    {
+        "id":11,
+        "type":"lunch",
+        "title":"Fried Fish",
+        "description":"Fish With Veg",
+        "img":"https://i.ibb.co/6t24yDW/d3.jpg",
+        "price":300,
+        "quantity":2
+    },
+    {
+        "id":12,
+        "type":"lunch",
+        "title":"Steak",
+        "description":"Premium Quality",
+        "img":"https://i.ibb.co/c1jxMz0/l6.jpg",
+        "price":300,
+        "quantity":1
+    },
+    {
+        "id":13,
+        "type":"dinner",
+        "title":"Chicken Salad",
+        "description":"Chicken With Veg",
+        "img":"https://i.ibb.co/Gk8wMz6/d1.jpg",
+        "price":300,
+        "quantity":4
+    },
+    {
+        "id":14,
+        "type":"dinner",
+        "title":"Rice & Peas",
+        "description":"Rice & Cooked Peas",
+        "img":"https://i.ibb.co/PMSXgv4/d2.jpg",
+        "price":300,
+        "quantity":2
+    },
+    {
+        "id":15,
+        "type":"dinner",
+        "title":"Fried Fish",
+        "description":"Fried With Veg",
+        "img":"https://i.ibb.co/6t24yDW/d3.jpg",
+        "price":300,
+        "quantity":2
+    },
+    {
+        "id":16,
+        "type":"dinner",
+        "title":"Nan & Haleem",
+        "description":"Traditional Bengali Food",
+        "img":"https://i.ibb.co/7tLbQ83/d4.jpg",
+        "price":800,
+        "quantity":6
+    },
+    {
+        "id":17,
+        "type":"dinner",
+        "title":"vegetables",
+        "description":"Cooked Vegetables",
+        "img":"https://i.ibb.co/qxL19hK/d5.jpg",
+        "price":100,
+        "quantity":2
+    },
+    {
+        "id":18,
+        "type":"dinner",
+        "title":"Fried Rice",
+        "description":"Rice Fried & Veg",
+        "img":"https://i.ibb.co/qRB0xw3/d6.jpg",
+        "price":150,
+        "quantity":8
+    }
+]
