@@ -5,7 +5,7 @@ import c3 from "../../../images/c3.png";
 
 const ChooseUs = () => {
   return (
-    <div className="">
+    <div className="mb-5">
       <div className="text-center mb-20">
         <h1 className="lg:text-xl text-md mt-10">Why Will You Choose Us?</h1>
       </div>

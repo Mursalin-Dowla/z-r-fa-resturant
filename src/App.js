@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Cart from './components/Cart/Cart';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Footer from './components/Shared/Footer/Footer';
@@ -15,6 +16,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
+        <Route path='/cart' element={<Cart />}></Route>
       </Routes>
       <Footer />
     </div>
