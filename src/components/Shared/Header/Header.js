@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
-    <div>
+    <div className="font-serif">
       <div className="flex justify-between">
         <div className="lg:ml-10">
           <img className="w-44" src={logo} alt="" />
@@ -18,7 +18,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="ml-2 lg:mx-4">
-              <Link to="/login">Login</Link>
+              <Link  to="/login">Login</Link>
             </li>
             <li className="ml-2 lg:mx-4">
               <Link to="/signup">Signup</Link>
