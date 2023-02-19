@@ -12,15 +12,15 @@ const Header = () => {
         </div>
         <div>
           <ul className="flex mt-6 mr-5 lg:mr-20">
-            <li className="ml-2 lg:mx-4">
+            <li className="ml-2 lg:mx-4 mt-1">
               <Link to='/cart'>
                 <FontAwesomeIcon icon={faCartShopping} />
               </Link>
             </li>
-            <li className="ml-2 lg:mx-4">
+            <li className="ml-2 lg:mx-4 hover:bg-[#EB6E00] px-2 py-1 rounded-full hover:text-white">
               <Link  to="/login">Login</Link>
             </li>
-            <li className="ml-2 lg:mx-4">
+            <li className="ml-2 lg:mx-4 hover:bg-[#EB6E00] px-2 py-1 rounded-full hover:text-white">
               <Link to="/signup">Signup</Link>
             </li>
           </ul>

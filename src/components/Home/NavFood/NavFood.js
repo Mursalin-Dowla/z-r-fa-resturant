@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EachFood from "./EachFood";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleDown, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 
 const NavFood = () => {
   const [foods, setFoods] = useState([]);

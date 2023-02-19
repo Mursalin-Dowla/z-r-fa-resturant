@@ -3,7 +3,7 @@ import logo from '../../../images/logo-dark.png';
 
 const Footer = () => {
     return (
-        <div className='bg-[#12100f] mt-10'>
+        <div className='bg-[#12100f] pt-10'>
             <div className='flex flex-col md:flex-row md:justify-between items-center pt-14'>
                 <div className='md:ml-8 md:mt-[-20px]'>
                     <img className="w-44" src={logo} alt="logo" />
@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='text-white flex flex-col md:flex-row md:justify-between md:px-14 items-center mt-14'>
+            <div className='text-white flex flex-col md:flex-row md:justify-between md:px-14 items-center pb-14 mt-14'>
                 <div>
                     <p className='text-sm text-gray-600'>copyright &copy;2023 Md Mursalin Dowla </p>
                 </div>
