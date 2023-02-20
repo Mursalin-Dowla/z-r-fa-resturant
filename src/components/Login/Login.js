@@ -3,14 +3,17 @@ import {onAuthStateChanged, signInWithEmailAndPassword,signInWithPopup, GoogleAu
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import backgroundImage from '../../images/login-bg.png';
-import { Link, useNavigate } from 'react-router-dom';
+import {useLocation, Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Login = () => {
 const [error, setError] = useState('');
 const [user,setUser] = useState({});
 const navigate = useNavigate();
+const location = useLocation();
 const provider = new GoogleAuthProvider();
+
+const from = location?.state?.from?.pathname || "/";
 
 useEffect(()=>{
     onAuthStateChanged(auth, user=>{
@@ -19,7 +22,7 @@ useEffect(()=>{
 },[])
 
 if(user){
-    navigate('/');
+  navigate(from, {replace:true});
   }
   const handleSignInWithGoogle =() =>{
     signInWithPopup(auth, provider)

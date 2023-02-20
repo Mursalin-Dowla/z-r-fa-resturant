@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EachFood = (props) => {
-    const {food} = props;
+    const {food, addToCart} = props;
     const {type, title, description, img, price} = food;
     return (
         <div className='m-5 flex justify-center shadow-md md:shadow-none md:hover:shadow-lg rounded-sm p-2'>
@@ -13,7 +13,7 @@ const EachFood = (props) => {
             <h2 className='text-gray-500 capitalize'>{type}</h2>
             <p className='text-gray-500 capitalize'>{description}</p>
             <p className='text-xs font-semibold'>Price: {price} BDT</p>
-            <button className='btn bg-[#EB6E00] text-white px-1 rounded-sm mt-2'>Order</button>
+            <button onClick={()=>addToCart(food)} className='btn bg-[#EB6E00] text-white px-1 rounded-sm mt-2'>Order</button>
            </div>
         </div>
     );

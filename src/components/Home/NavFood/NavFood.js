@@ -2,10 +2,28 @@ import React, { useEffect, useState } from "react";
 import EachFood from "./EachFood";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { addToDb, getStoredData } from "../../../utilities/fakedb";
+import useFoods from "../../../hooks/useFoods";
 
 const NavFood = () => {
-  const [foods, setFoods] = useState([]);
+  const [foods, setFoods] = useFoods();
   const [showFoods, setShowFoods] = useState([]);
+  const [cart, setCart] = useState([]);
+
+
+  useEffect(()=>{
+    const storedData = getStoredData();
+    const savedData =[];
+    for(const id in storedData){
+    const addedProduct = foods.find(product=> product.id === id)
+    if(addedProduct){
+        const quantity = storedData[id];
+        addedProduct.quantity = quantity;
+        savedData.push(addedProduct);
+    }
+    }
+    setCart(savedData);
+},[foods]);
 
   const handleName = (value) => {
     setShowFoods(
@@ -14,13 +32,24 @@ const NavFood = () => {
         )
     );
   };
-  
-  useEffect(() => {
-    const url = 'foods.json';
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
-  }, []);
+
+
+  const addToCart =(food)=>{
+    let newCart = [];
+    const exists = cart.find(prod => prod.id ===food.id)
+     if(!exists){
+        food.quantity = 1;
+        newCart = [...cart, food]
+     }
+     else{
+        const rest = cart.filter(prod => prod.id !== food.id);
+        exists.quantity = exists.quantity + 1;
+        newCart = [...rest, exists];
+     }
+    
+    setCart(newCart);
+    addToDb(food.id);
+  }
   return (
     <div className="mt-5">
       <div className="">
@@ -39,6 +68,7 @@ const NavFood = () => {
         {
           showFoods.map(food=><EachFood key={food.id}
             food={food}
+            addToCart={addToCart}
           />)
         }
       </div>
