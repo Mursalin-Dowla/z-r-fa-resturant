@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import {onAuthStateChanged, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import backgroundImage from '../../images/login-bg.png';
@@ -10,6 +10,7 @@ const Login = () => {
 const [error, setError] = useState('');
 const [user,setUser] = useState({});
 const navigate = useNavigate();
+const provider = new GoogleAuthProvider();
 
 useEffect(()=>{
     onAuthStateChanged(auth, user=>{
@@ -19,6 +20,15 @@ useEffect(()=>{
 
 if(user){
     navigate('/');
+  }
+  const handleSignInWithGoogle =() =>{
+    signInWithPopup(auth, provider)
+    .then((result) => {
+    
+  }).catch((error) => {
+    const errorMessage = error.message;
+    setError(errorMessage);
+  });
   }
 
 const handleFormSubmit =(event) =>{
@@ -48,11 +58,14 @@ const handleFormSubmit =(event) =>{
                         <input className='pl-1 border mt-5 md:text-lg border-[#EB6E00]' type="password" name="password" id="password" placeholder='Password'/>
                         <input className='bg-[#EB6E00] md:text-lg mt-5 text-white w-[30%] md:w-[20%] mx-auto py-1 cursor-pointer hover:bg-[#f7933c]' type="submit" value="Login" />         
                     </form>
+                    {
+                        error && <p className='text-center text-red-600'>{error}</p>
+                    }
                     <div className='my-4'>
                         <p className='text-center font-semibold'>or</p>
                     </div>
                     <div className='text-center'>
-                        <button className='bg-blue-600 text-white py-1 px-[13px] mb-2 rounded-sm'><FontAwesomeIcon className='text-white mr-1' icon={faGoogle} /> Join With Google</button><br />
+                        <button onClick={handleSignInWithGoogle} className='bg-blue-600 text-white py-1 px-[13px] mb-2 rounded-sm'><FontAwesomeIcon className='text-white mr-1' icon={faGoogle} /> Join With Google</button><br />
                         <button className='bg-blue-900 text-white py-1 px-2 rounded-sm'><FontAwesomeIcon className='text-white mr-1' icon={faFacebook} />Join With Facebook</button>
                         <p className='mt-4'>Don't have an account? <Link className='text-blue-600' to='/signup'>Sign Up</Link></p>
                     </div>
