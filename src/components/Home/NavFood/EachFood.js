@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {onAuthStateChanged } from "firebase/auth";
+import auth from '../../../firebase.init';
 
 const EachFood = (props) => {
+    const [user,setUser] = useState({});
     const {food, addToCart} = props;
     const {type, title, description, img, price} = food;
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+         setUser(user);
+        } 
+      });
     return (
         <div className='m-5 flex justify-center shadow-md md:shadow-none md:hover:shadow-lg rounded-sm p-2'>
            <div>
@@ -13,7 +22,7 @@ const EachFood = (props) => {
             <h2 className='text-gray-500 capitalize'>{type}</h2>
             <p className='text-gray-500 capitalize'>{description}</p>
             <p className='text-xs font-semibold'>Price: {price} BDT</p>
-            <button onClick={()=>addToCart(food)} className='btn bg-[#EB6E00] text-white px-1 rounded-sm mt-2'>Order</button>
+            {Object.keys(user).length !== 0 && <button onClick={()=>addToCart(food)} className='btn bg-[#EB6E00] text-white px-1 rounded-sm mt-2'>Order</button>}
            </div>
         </div>
     );

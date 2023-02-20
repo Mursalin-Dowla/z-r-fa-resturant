@@ -37,7 +37,7 @@ const Header = () => {
         <div>
           <ul className="flex mt-6 mr-5 lg:mr-20">
             <li className="ml-2 lg:mx-4 mt-1 relative">
-            <div className="absolute top-[10%] right-[-80%] md:right-[-90%] text-white bg-[#EB6E00] rounded-full w-[15px] h-[15px] text-xs text-center">{cart.length}</div>
+            {Object.keys(user).length !== 0 && <div className="absolute top-[10%] right-[-80%] md:right-[-90%] text-white bg-[#EB6E00] rounded-full w-[15px] h-[15px] text-xs text-center">{cart.length}</div>}
              <Link to='/cart'>
                 <FontAwesomeIcon icon={faCartShopping} />
               </Link>
